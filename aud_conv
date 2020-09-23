@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+filename=$(basename -- "$1")
+extension="${filename##*.}"
+filename="${filename%.*}"
+
+echo "Outputting $1 to audio/$filename.wav"
+# ffmpeg -i "$1" -ac 1 -ar 16000 audio/$filename.wav
+
+echo "Running Subtitle Conversion"
+python3 make_srt.py audio/$filename.wav
