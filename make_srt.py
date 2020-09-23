@@ -125,6 +125,10 @@ speech_recognizer.canceled.connect(stop_cb)
 phrase_list_grammar = speechsdk.PhraseListGrammar.from_recognizer(speech_recognizer)
 phrase_list = open(os.path.join(path, "phrases.txt"), "r")
 phrases = phrase_list.read().split("\n")
+if len(phrases) > 1024:
+    logger.error("Cannot have more than 1024 phrases, you have " + str(len(phrases)))
+    exit(1)
+
 for phrase in phrases:
     phrase_list_grammar.addPhrase(phrase)
 
