@@ -1,3 +1,6 @@
+# Adapted from https://stackoverflow.com/questions/62554058/subtitles-captions-with-microsoft-azure-speech-to-text-in-python
+# Adapted from solution from "sathya_vijayakumar-MSFT" under https://creativecommons.org/licenses/by-sa/4.0/
+#
 import azure.cognitiveservices.speech as speechsdk
 import datetime
 import json
