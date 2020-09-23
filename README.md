@@ -15,6 +15,8 @@ Results are not perfect, but are a great start.
   - Run `./aud_conv PATH_TO_VIDEO` which will use `ffmpeg` to extract 16 bit WAV audio and then converts it
 6. Subtitles will be output to `subtitles` folder
 
+_Install ffmpeg with `brew install ffmpeg` on Mac, `sudo apt update && sudo apt install ffmpeg` on Ubuntu 18.04+, and from https://ffmpeg.org/download.html for Windows_
+
 ### Optional
 
 You can add phrases (one per line), to give the speech to text converter a hint into what you're saying, in `phrases.txt`
